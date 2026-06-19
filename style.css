@@ -27,14 +27,24 @@
 }
 
 html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+  overscroll-behavior-x: none;
   scroll-behavior: smooth;
   scroll-padding-top: 96px;
 }
 
 body {
   margin: 0;
-  min-width: 320px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   overflow-x: hidden;
+  overflow-x: clip;
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
   color: var(--text);
   background:
     radial-gradient(circle at 15% 6%, rgba(108, 99, 255, 0.12), transparent 27rem),
@@ -47,6 +57,14 @@ body {
 
 body.menu-open {
   overflow: hidden;
+}
+
+main,
+.site-footer {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img {
@@ -182,6 +200,8 @@ button {
   padding: 150px 0 96px;
   display: flex;
   align-items: center;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .hero-grid {
@@ -1084,8 +1104,9 @@ h3 {
   }
 
   .hero-visual {
-    width: calc(100% + 10px);
-    margin-left: -5px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
   }
 
   .product-visual {
@@ -1113,13 +1134,13 @@ h3 {
     width: 190px;
     height: 190px;
     top: -30px;
-    left: -35px;
+    left: 0;
   }
 
   .visual-glow-cyan {
     width: 170px;
     height: 170px;
-    right: -30px;
+    right: 0;
     bottom: -20px;
   }
 
