@@ -3,102 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizlilik ve Güvenlik Politikası - ÜniSeç</title>
-    <meta name="description" content="ÜniSeç uygulaması Gizlilik ve Güvenlik Politikası ve KVKK Aydınlatma Metni.">
+    <meta name="theme-color" content="#0f0f1a">
+    <meta name="description" content="ÜniSeç uygulamasının gizlilik politikası, işlenen veri kategorileri, güvenlik tedbirleri ve kullanıcı hakları.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://uni-app-web-sitesi.vercel.app/privacy.html">
+    <link rel="icon" type="image/svg+xml" href="assets/brand/unisec-logo.svg">
+    <title>Gizlilik Politikası — ÜniSeç</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="nav-content">
-            <a href="index.html" class="logo">ÜniSeç</a>
-            <div class="nav-links">
-                <a href="index.html">Ana Sayfa</a>
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+
+    <header class="site-header" data-header>
+        <nav class="nav-content" aria-label="Ana menü">
+            <a href="index.html" class="brand" aria-label="ÜniSeç ana sayfa">
+                <img src="assets/brand/unisec-logo.svg" alt="" width="42" height="42">
+                <span>ÜniSeç</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menüyü aç" data-menu-toggle>
+                <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+            </button>
+            <div class="nav-links" id="nav-links" data-nav-links>
+                <a href="index.html">Ana sayfa</a>
+                <a href="index.html#features">Özellikler</a>
+                <a href="account-deletion.html">Hesap silme</a>
+                <a class="nav-cta" href="mailto:uniseccapp@gmail.com">İletişim</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <div class="doc-container">
-        <h1>ÜniSeç — Kapsamlı Gizlilik ve Güvenlik Politikası</h1>
-        <p>Bu belge, <strong>ÜniSeç — Üniversite Yaşam Rehberi</strong> uygulamasının kullanıcı verilerini nasıl topladığını, işlediğini, sakladığını ve en üst düzey güvenlik standartlarıyla nasıl koruduğunu detaylandıran şeffaf bir manifestodur.</p>
-        <p>Uygulamanın kaynak kodları, veritabanı kuralları ve mimarisi temel alınarak "Privacy by Design" (Tasarım Aşamasında Gizlilik) ve "Security by Default" (Varsayılan Olarak Güvenlik) prensipleriyle oluşturulmuştur.</p>
-        
-        <h2>BÖLÜM 1: GİZLİLİK POLİTİKASI (Kişisel Verilerin İşlenmesi)</h2>
-        <p>Uygulamamız, veri minimizasyonu ilkesini benimseyerek sadece hizmetin kalitesini artırmak için zorunlu olan verileri toplar. Toplanan veriler ve işlenme amaçları sistem mimarisine göre aşağıda sınıflandırılmıştır:</p>
+    <main class="document-main" id="main-content">
+        <article class="doc-container">
+            <header class="doc-header">
+                <span class="eyebrow">Yasal ve güvenlik</span>
+                <h1>Gizlilik Politikası</h1>
+                <p>Son güncelleme: 20 Haziran 2026</p>
+            </header>
 
-        <h3>1.1. Toplanan Kullanıcı Profil Verileri</h3>
-        <p>Firebase Authentication ve Cloud Firestore altyapısı üzerinden aşağıdaki profil verileriniz toplanır:</p>
-        <ul>
-            <li><strong>Kimlik ve Profil Verileri:</strong> Tam ad, E-posta adresi, Profil fotoğrafı URL'si, Biyografi.</li>
-            <li><strong>Akademik Veriler:</strong> Onaylı öğrenci durumu, Üniversite adı ve ID'si, Bölüm, Sınıf.</li>
-            <li><strong>Kullanım Verileri:</strong> Son giriş tarihi, Hesap oluşturma tarihi, Bildirim tercihleri.</li>
-        </ul>
+            <p>Bu politika, ÜniSeç mobil uygulamasını kullandığınızda hangi verilerin işlendiğini, bu verilerin hangi amaçlarla kullanıldığını ve sahip olduğunuz hakları açıklar.</p>
 
-        <h3>1.2. Kullanıcı Tarafından Üretilen İçerikler (UGC)</h3>
-        <ul>
-            <li><strong>Yorumlar ve Değerlendirmeler:</strong> Üniversiteler, bölümler ve mekanlar hakkında yapılan yorumlar, puanlamalar, avantajlar, dezavantajlar ve yüklenen görseller. <em>Not: Kullanıcılar yorumlarını tamamen anonim olarak yapma hakkına sahiptir.</em></li>
-            <li><strong>Tercih Listeleri:</strong> Kullanıcıların oluşturduğu tercih listeleri (halka açık veya gizli), liste görüntülenme sayıları ve paylaşılan linkler.</li>
-            <li><strong>Karşılaştırma Geçmişi ve Notları:</strong> Plus ve Pro abonelerimizin yaptığı yapay zeka destekli karşılaştırma kayıtları ve notlar. Bu veriler <em>yalnızca kullanıcının kendisine</em> açıktır.</li>
-        </ul>
+            <div class="doc-callout">
+                <p>ÜniSeç hâlen kapalı test aşamasındadır. Uygulamanın işlevleri veya kullandığı hizmetler değiştiğinde bu metin de güncellenebilir.</p>
+            </div>
 
-        <h3>1.3. Cihaz, Konum ve Analitik Verileri</h3>
-        <ul>
-            <li><strong>Cihaz ve Platform Verileri:</strong> Cihaz modeli, işletim sistemi versiyonu, hata logları (crash logs).</li>
-            <li><strong>Push Bildirim Cihaz Token'ları:</strong> Cihaza özel bildirim gönderebilmek adına şifreli şekilde saklanır.</li>
-            <li><strong>Konum Verileri:</strong> Harita özellikleri kullanılırken cihazın anlık konumu işlenir, sunucularda kalıcı olarak tutulmaz.</li>
-        </ul>
+            <h2>1. İşlenen veri kategorileri</h2>
 
-        <h3>1.4. Üçüncü Taraf Entegrasyonları ve Veri Paylaşımı</h3>
-        <ul>
-            <li><strong>Satın Alımlar:</strong> Ödeme bilgileri, kredi kartı verileri <strong>kesinlikle</strong> sunucularımızda saklanmaz, doğrudan Apple App Store veya Google Play Store tarafından işlenir.</li>
-            <li><strong>Reklam Sağlayıcıları:</strong> Ücretsiz sürüm için Google AdMob entegrasyonu mevcuttur.</li>
-            <li><strong>Yapay Zeka (AI Summary):</strong> Yapay zeka kullanılırken, kişisel kimlik verileri yapay zeka modelleriyle <strong>paylaşılmaz</strong>.</li>
-        </ul>
+            <h3>1.1. Hesap ve profil bilgileri</h3>
+            <ul>
+                <li>Ad, e-posta adresi, profil fotoğrafı ve isteğe bağlı biyografi bilgileri</li>
+                <li>Üniversite, bölüm, sınıf ve öğrenci doğrulama durumu</li>
+                <li>Hesap oluşturma ve son giriş gibi hesap yönetimi kayıtları</li>
+                <li>Dil, tema ve bildirim tercihleri</li>
+            </ul>
 
-        <h2>BÖLÜM 2: GÜVENLİK POLİTİKASI (Sistem Mimarisi ve Koruma)</h2>
-        <p>Uygulamamızın veritabanı (Firestore) ve depolama (Cloud Storage) katmanları, "Sıfır Güven" (Zero Trust) felsefesiyle inşa edilmiş güvenlik kurallarıyla korunmaktadır.</p>
+            <h3>1.2. Kullanıcı tarafından oluşturulan içerikler</h3>
+            <ul>
+                <li>Üniversite, bölüm ve mekân yorumları ile puanlamalar</li>
+                <li>Yorum veya mekân önerilerine eklenen görseller</li>
+                <li>Tercih listeleri, karşılaştırma notları ve geri bildirimler</li>
+                <li>Beğeni, raporlama ve içerik moderasyonu kayıtları</li>
+            </ul>
+            <p>Anonim olarak yayınlanan yorumlarda kullanıcı adı diğer kullanıcılara gösterilmez. Güvenlik, moderasyon ve kötüye kullanımı önleme amacıyla içerik, hesapla sistem düzeyinde ilişkilendirilebilir.</p>
 
-        <h3>2.1. Cloud Firestore Güvenlik Kuralları Katmanı (RBAC)</h3>
-        <ul>
-            <li><strong>Kullanıcı İzolasyonu:</strong> Özel veriler <strong>sadece</strong> verinin sahibinin okuma ve yazma yetkisine açık olacak şekilde kilitlenmiştir.</li>
-            <li><strong>Rol Tabanlı Erişim Kontrolü:</strong> Admin yetkileri sıkı sıkıya bağlıdır. Yetkisiz erişimler reddedilir.</li>
-            <li><strong>Sıkı Veri Validasyonu:</strong> Veritabanına yazılacak tüm veriler karakter, tip ve boyut limitlerine tabidir. Payload Injection saldırıları imkansız kılınmıştır.</li>
-            <li><strong>Rate Limiting ve Kotalar:</strong> Hileli kullanım veya AI endpoint'lerini suistimal etme denemeleri veritabanı seviyesinde engellenmiştir.</li>
-        </ul>
+            <h3>1.3. Cihaz ve kullanım bilgileri</h3>
+            <ul>
+                <li>Uygulama sürümü, işletim sistemi ve cihaz türü gibi teknik bilgiler</li>
+                <li>Çökme kayıtları, performans verileri ve temel kullanım analitiği</li>
+                <li>Bildirim göndermek için kullanılan cihaz bildirim belirteçleri</li>
+                <li>Güvenlik ve kötüye kullanım tespiti için istek kayıtları</li>
+            </ul>
 
-        <h3>2.2. Cloud Storage (Dosya Depolama) Güvenlik Katmanı</h3>
-        <ul>
-            <li><strong>Dosya Tipi Kontrolü:</strong> Yüklenen dosyanın <strong>kesinlikle</strong> bir resim olması gerekmektedir (zararlı script yüklenemez).</li>
-            <li><strong>Dosya Boyutu Sınırları:</strong> Medya dosyaları maksimum 10 MB ile sınırlandırılmıştır.</li>
-        </ul>
+            <h3>1.4. Konum bilgisi</h3>
+            <p>Konum izni verdiğinizde, yakındaki öğrenci mekânlarını göstermek veya harita özelliklerini çalıştırmak amacıyla cihaz konumu kullanılabilir. İzinler cihaz ayarlarından değiştirilebilir.</p>
 
-        <h3>2.3. Platform Seviyesinde Güvenlik Önlemleri</h3>
-        <ul>
-            <li><strong>Firebase App Check:</strong> Sahte cihaz ve sunucu dışı istekleri (Botnet, API Abuse) engellemek için kullanılır.</li>
-        </ul>
+            <h2>2. Verileri kullanma amaçlarımız</h2>
+            <ul>
+                <li>Hesabınızı oluşturmak, doğrulamak ve yönetmek</li>
+                <li>Üniversite, bölüm, şehir ve mekân keşif özelliklerini sunmak</li>
+                <li>Yorum, favori, tercih listesi ve karşılaştırma özelliklerini çalıştırmak</li>
+                <li>Bildirim tercihlerinize göre uygulama bildirimleri göndermek</li>
+                <li>İçerikleri denetlemek, spam ve kötüye kullanımı önlemek</li>
+                <li>Hataları tespit etmek, güvenliği ve uygulama performansını geliştirmek</li>
+                <li>Destek ve hesap silme taleplerini sonuçlandırmak</li>
+            </ul>
 
-        <h2>BÖLÜM 3: YASAL HAKLAR VE İLETİŞİM (KVKK / GDPR)</h2>
-        
-        <h3>3.1. Kullanıcı Hakları ve Veri Silme Politikası</h3>
-        <ul>
-            <li><strong>Hesap Silme Hakkı:</strong> Kullanıcılar, uygulama içi ayarlar üzerinden hesaplarını sildiklerinde tüm kişisel veriler veritabanından kalıcı olarak silinir.</li>
-            <li><strong>Anonimlik Hakkı:</strong> "Anonim" olarak yapılan yorumlarda gerçek adlar veritabanına yazılmaz, diğer kullanıcılarla paylaşılmaz.</li>
-            <li><strong>Veri Erişimi ve Kontrolü:</strong> Kullanıcılar yürürlükteki veri koruma yasaları (KVKK, GDPR) kapsamında verilerine erişme, düzeltme, silme ve işlenmesine itiraz etme hakkına her zaman sahiptir.</li>
-        </ul>
-        
-        <h3>3.2. Yaş Sınırı ve Çocukların Gizliliği</h3>
-        <p>ÜniSeç, üniversite adayı ve öğrencisi olan kitleye (17+ yaş) hitap etmektedir. Bilerek 13 yaşından küçük çocuklardan kişisel veri toplanmaz ve çocuklara yönelik bir hizmet sunulmaz. Aksi bir durum tespit edildiğinde ilgili veriler derhal imha edilir.</p>
+            <h2>3. Hizmet sağlayıcılar</h2>
+            <p>Uygulamanın çalışması için aşağıdaki hizmet kategorilerinden yararlanılabilir:</p>
+            <ul>
+                <li><strong>Google Firebase:</strong> kimlik doğrulama, veritabanı, dosya depolama, bildirim, uygulama bütünlüğü, analitik ve hata raporlama</li>
+                <li><strong>Google Play ve Apple App Store:</strong> uygulama dağıtımı ve platform üzerinden gerçekleştirilen satın alma işlemleri</li>
+                <li><strong>RevenueCat:</strong> abonelik ve satın alma haklarının yönetimi</li>
+                <li><strong>Google AdMob:</strong> ücretsiz kullanım akışlarında reklam gösterimi</li>
+                <li><strong>Yapay zeka hizmetleri:</strong> karşılaştırma özetleri gibi kullanıcı tarafından başlatılan özelliklerin sunulması</li>
+            </ul>
+            <p>Ödeme kartı bilgileri ÜniSeç sunucularında tutulmaz; ödeme işlemleri ilgili uygulama mağazası tarafından yürütülür. Üçüncü taraf hizmetlerin kendi gizlilik koşulları geçerlidir.</p>
 
-        <h3>3.3. İletişim Formu ve Veri Sorumlusu</h3>
-        <p>Gizlilik politikamız veya kişisel verilerinizin işlenmesiyle ilgili tüm sorularınız, KVKK kapsamındaki talepleriniz için veri sorumlusu ekibimizle aşağıdaki adresten iletişime geçebilirsiniz:</p>
-        <p><strong>E-posta:</strong> <a href="mailto:support@unisec.com">support@unisec.com</a></p>
-    </div>
+            <h2>4. Güvenlik</h2>
+            <p>Verileri korumak için kimlik doğrulama, rol tabanlı erişim kontrolleri, sunucu tarafı doğrulamalar, dosya türü ve boyut sınırları, uygulama bütünlüğü kontrolleri ve istek sınırlama mekanizmaları kullanılır. İnternet üzerinden iletilen veya elektronik ortamda saklanan hiçbir yöntemin tamamen risksiz olmadığı unutulmamalıdır.</p>
 
-    <footer>
-        <p>&copy; 2026 ÜniSeç. Tüm hakları saklıdır.</p>
-        <div style="margin-top: 20px;">
-            <a href="index.html">Ana Sayfa</a>
-            <a href="privacy.html">Gizlilik & Güvenlik Politikası</a>
-            <a href="mailto:support@unisec.com">İletişim</a>
+            <h2>5. Saklama ve silme</h2>
+            <p>Veriler, hizmetin sunulması ve yukarıdaki amaçların yerine getirilmesi için gerekli olduğu sürece saklanır. Hesap silme işlemi başlatıldığında hesapla doğrudan ilişkili profil, özel listeler, bildirim kayıtları, kullanıcı içerikleri ve yüklenen dosyalar silinir veya gerekli durumlarda anonimleştirilir.</p>
+            <p>Güvenlik, dolandırıcılık önleme veya yasal yükümlülükler nedeniyle sınırlı kayıtların daha uzun süre tutulması gerekebilir. Hesap ve veri silme seçenekleri için <a href="account-deletion.html">hesap silme sayfasını</a> ziyaret edebilirsiniz.</p>
+
+            <h2>6. Haklarınız</h2>
+            <p>Uygulanabilir mevzuat kapsamında kişisel verilerinizle ilgili bilgi talep etme, erişim, düzeltme, silme, işlemeye itiraz etme ve ilgili mercilere başvurma haklarına sahip olabilirsiniz.</p>
+            <p>Talepleriniz için <a href="mailto:uniseccapp@gmail.com">uniseccapp@gmail.com</a> adresinden bizimle iletişime geçebilirsiniz. Hesabın size ait olduğunu doğrulamak amacıyla ek bilgi istenebilir.</p>
+
+            <h2>7. Çocukların gizliliği</h2>
+            <p>ÜniSeç üniversite adayları ve üniversite öğrencileri için tasarlanmıştır. Hizmet bilerek 13 yaşından küçük çocuklara sunulmaz. Böyle bir kullanıcıya ait veri işlendiğini düşünüyorsanız bizimle iletişime geçebilirsiniz.</p>
+
+            <h2>8. Politika değişiklikleri</h2>
+            <p>Bu politika, uygulamadaki veya mevzuattaki değişikliklere göre güncellenebilir. Güncel metin her zaman bu sayfada yayımlanır ve önemli değişikliklerde uygun kanallardan bilgilendirme yapılır.</p>
+
+            <h2>9. İletişim</h2>
+            <p>Gizlilik, kişisel veri veya güvenlik konularındaki talepleriniz için:</p>
+            <p><strong>E-posta:</strong> <a href="mailto:uniseccapp@gmail.com">uniseccapp@gmail.com</a></p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-shell footer-bottom">
+            <p>&copy; <span data-current-year>2026</span> ÜniSeç. Tüm hakları saklıdır.</p>
+            <p><a href="index.html">Ana sayfa</a> · <a href="account-deletion.html">Hesap ve veri silme</a></p>
         </div>
     </footer>
 </body>

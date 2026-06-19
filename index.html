@@ -3,72 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ÜniSeç — Üniversite Yaşam Rehberi</title>
-    <meta name="description" content="Üniversiteleri keşfet, yapay zeka ile karşılaştır ve kendi üniversite yaşamını en iyi şekilde planla. ÜniSeç senin rehberin.">
+    <meta name="theme-color" content="#0f0f1a">
+    <meta name="description" content="ÜniSeç ile Türkiye'deki üniversiteleri, bölümleri, öğrenci yorumlarını ve kampüs çevresini keşfet. Uygulama şu anda Google Play kapalı test aşamasında.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://uni-app-web-sitesi.vercel.app/">
+    <link rel="icon" type="image/svg+xml" href="assets/brand/unisec-logo.svg">
+    <link rel="apple-touch-icon" href="assets/brand/unisec-icon-512.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="ÜniSeç">
+    <meta property="og:title" content="ÜniSeç — Üniversite kararını güvenle ver">
+    <meta property="og:description" content="Üniversiteleri karşılaştır, gerçek öğrenci deneyimlerini oku ve tercih sürecini tek yerde yönet.">
+    <meta property="og:url" content="https://uni-app-web-sitesi.vercel.app/">
+    <meta property="og:image" content="https://uni-app-web-sitesi.vercel.app/assets/media/unisec-feature-graphic.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>ÜniSeç — Üniversite Karşılaştırma ve Yaşam Rehberi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Ionicons for modern lightweight icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="nav-content">
-            <a href="index.html" class="logo">ÜniSeç</a>
-            <div class="nav-links">
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+
+    <header class="site-header" data-header>
+        <nav class="nav-content" aria-label="Ana menü">
+            <a href="#top" class="brand" aria-label="ÜniSeç ana sayfa">
+                <img src="assets/brand/unisec-logo.svg" alt="" width="42" height="42">
+                <span>ÜniSeç</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menüyü aç" data-menu-toggle>
+                <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+            <div class="nav-links" id="nav-links" data-nav-links>
                 <a href="#features">Özellikler</a>
-                <a href="privacy.html">Gizlilik Politikası</a>
+                <a href="#numbers">Veriler</a>
+                <a href="#closed-test">Kapalı test</a>
+                <a href="#faq">SSS</a>
+                <a href="privacy.html">Gizlilik</a>
+                <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.unisec.app" target="_blank" rel="noopener noreferrer">Google Play'de aç</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Geleceğini <span>Özgürce</span> Seç</h1>
-            <p>Üniversiteleri keşfet, gerçek öğrencilerin yorumlarını oku ve yapay zeka destekli araçlarımızla senin için en doğru tercihi yap.</p>
-            <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">
-                    <ion-icon name="logo-apple"></ion-icon>
-                    App Store'dan İndir
+    <main id="main-content">
+        <section class="hero" id="top">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <div class="status-pill">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Google Play kapalı test sürümü
+                    </div>
+                    <h1>Üniversite kararını <span>veriye ve gerçek deneyimlere</span> dayandır.</h1>
+                    <p class="hero-lead">Üniversiteleri, bölümleri ve şehirleri karşılaştır. Doğrulanmış öğrenci yorumlarını oku, kampüs çevresini keşfet ve tercih sürecini tek yerde yönet.</p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.unisec.app" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-google-playstore" aria-hidden="true"></ion-icon>
+                            Google Play'de aç
+                        </a>
+                        <a class="btn btn-secondary" href="mailto:uniseccapp@gmail.com?subject=%C3%9CniSe%C3%A7%20kapal%C4%B1%20test%20kat%C4%B1l%C4%B1m%C4%B1&body=Merhaba%2C%20%C3%9CniSe%C3%A7%20Google%20Play%20kapal%C4%B1%20testine%20kat%C4%B1lmak%20istiyorum.%0A%0AGoogle%20Play%20hesab%C4%B1mda%20kulland%C4%B1%C4%9F%C4%B1m%20e-posta%3A%20">
+                            Katılım için e-posta
+                            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                        </a>
+                    </div>
+
+                    <ul class="hero-points" aria-label="Öne çıkan özellikler">
+                        <li><ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon> Ücretsiz keşif</li>
+                        <li><ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon> Gerçek öğrenci yorumları</li>
+                        <li><ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon> Android kapalı test</li>
+                    </ul>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-glow visual-glow-purple" aria-hidden="true"></div>
+                    <div class="visual-glow visual-glow-cyan" aria-hidden="true"></div>
+                    <figure class="product-visual">
+                        <img src="assets/media/unisec-feature-graphic.png" alt="ÜniSeç uygulamasının üniversite, öğrenci topluluğu ve yapay zeka özelliklerini gösteren tanıtım görseli" width="1024" height="500">
+                        <figcaption>
+                            <img src="assets/brand/unisec-logo.svg" alt="" width="32" height="32">
+                            <span>Keşfet · Karşılaştır · Karar ver</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="numbers-section" id="numbers" aria-labelledby="numbers-title">
+            <div class="section-shell">
+                <div class="section-heading centered">
+                    <span class="eyebrow">Türkiye çapında veri</span>
+                    <h2 id="numbers-title">Tercih sürecinde ihtiyacın olan bilgiler tek uygulamada.</h2>
+                </div>
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <strong>208+</strong>
+                        <span>üniversite</span>
+                    </article>
+                    <article class="stat-card">
+                        <strong>3.487</strong>
+                        <span>bölüm kaydı</span>
+                    </article>
+                    <article class="stat-card">
+                        <strong>1.395</strong>
+                        <span>öğrenci mekânı</span>
+                    </article>
+                    <article class="stat-card">
+                        <strong>449</strong>
+                        <span>KYK yurdu</span>
+                    </article>
+                </div>
+
+                <div class="university-strip" aria-label="Uygulamada yer alan üniversitelerden örnekler">
+                    <span>Aralarında</span>
+                    <div class="university-logos">
+                        <img src="assets/universities/odtu.png" alt="ODTÜ" loading="lazy">
+                        <img src="assets/universities/itu.png" alt="İTÜ" loading="lazy">
+                        <img src="assets/universities/hacettepe.png" alt="Hacettepe Üniversitesi" loading="lazy">
+                        <img src="assets/universities/ege.png" alt="Ege Üniversitesi" loading="lazy">
+                        <img src="assets/universities/ankara.png" alt="Ankara Üniversitesi" loading="lazy">
+                        <img src="assets/universities/marmara.png" alt="Marmara Üniversitesi" loading="lazy">
+                    </div>
+                    <span>ve daha fazlası</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section" id="features" aria-labelledby="features-title">
+            <div class="section-shell">
+                <div class="section-heading">
+                    <span class="eyebrow">Neler yapabilirsin?</span>
+                    <h2 id="features-title">Sadece puana değil, yaşayacağın deneyime de bak.</h2>
+                    <p>ÜniSeç; akademik verileri, öğrenci deneyimlerini ve şehir yaşamını aynı karar ekranında buluşturur.</p>
+                </div>
+
+                <div class="features-grid">
+                    <article class="feature-card feature-large">
+                        <div class="feature-icon icon-purple">
+                            <ion-icon name="git-compare-outline" aria-hidden="true"></ion-icon>
+                        </div>
+                        <div>
+                            <span class="feature-label">Karşılaştır</span>
+                            <h3>Üniversite, bölüm ve şehirleri yan yana gör.</h3>
+                            <p>Puanları, sıralamaları, öğrenci değerlendirmelerini ve kampüs olanaklarını aynı yerde karşılaştır.</p>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon icon-pink">
+                            <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
+                        </div>
+                        <h3>Gerçek öğrenci yorumları</h3>
+                        <p>Doğrulanmış öğrencilerin eğitim, sosyal yaşam ve altyapı deneyimlerini oku.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon icon-cyan">
+                            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+                        </div>
+                        <h3>Kampüs çevresini keşfet</h3>
+                        <p>Kafeleri, kütüphaneleri, çalışma alanlarını, yurtları ve öğrenci mekânlarını bul.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon icon-gold">
+                            <ion-icon name="calculator-outline" aria-hidden="true"></ion-icon>
+                        </div>
+                        <h3>YKS puanını hesapla</h3>
+                        <p>Netlerini gir, yerleştirme puanını hesapla ve seçeneklerini daha bilinçli değerlendir.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon icon-purple">
+                            <ion-icon name="list-outline" aria-hidden="true"></ion-icon>
+                        </div>
+                        <h3>Tercih listeni oluştur</h3>
+                        <p>İlgilendiğin bölüm ve üniversiteleri kaydet, listeni düzenle ve paylaş.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon icon-pink">
+                            <ion-icon name="sparkles-outline" aria-hidden="true"></ion-icon>
+                        </div>
+                        <h3>Yapay zeka destekli özet</h3>
+                        <p>Karşılaştırma sonuçlarını daha hızlı yorumlamak için öne çıkan farkları anlaşılır biçimde gör.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="test-section" id="closed-test" aria-labelledby="test-title">
+            <div class="section-shell test-grid">
+                <div class="test-copy">
+                    <span class="eyebrow">Birlikte iyileştirelim</span>
+                    <h2 id="test-title">ÜniSeç şu anda kapalı test aşamasında.</h2>
+                    <p>Erken kullanıcı olarak uygulamayı deneyebilir, karşılaştığın sorunları ve geliştirme önerilerini doğrudan ekibimize iletebilirsin.</p>
+                    <a class="btn btn-primary" href="mailto:uniseccapp@gmail.com?subject=%C3%9CniSe%C3%A7%20kapal%C4%B1%20test%20kat%C4%B1l%C4%B1m%C4%B1&body=Merhaba%2C%20%C3%9CniSe%C3%A7%20Google%20Play%20kapal%C4%B1%20testine%20kat%C4%B1lmak%20istiyorum.%0A%0AGoogle%20Play%20hesab%C4%B1mda%20kulland%C4%B1%C4%9F%C4%B1m%20e-posta%3A%20">
+                        Katılım için e-posta gönder
+                        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                    </a>
+                </div>
+
+                <ol class="test-steps">
+                    <li>
+                        <span>01</span>
+                        <div>
+                            <h3>Bize e-posta gönder</h3>
+                            <p>Google Play hesabında kullandığın adresi uniseccapp@gmail.com üzerinden bize ilet.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>02</span>
+                        <div>
+                            <h3>Test bağlantısını aç</h3>
+                            <p>Hesabın test grubuna eklendikten sonra gönderilen katılım bağlantısını kullan.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>03</span>
+                        <div>
+                            <h3>Deneyimini paylaş</h3>
+                            <p>Uygulama içindeki geri bildirim alanından sorunları ve önerileri bize gönder.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq" aria-labelledby="faq-title">
+            <div class="section-shell faq-grid">
+                <div class="section-heading">
+                    <span class="eyebrow">Merak edilenler</span>
+                    <h2 id="faq-title">Sık sorulan sorular</h2>
+                    <p>Kapalı test ve ÜniSeç kullanımıyla ilgili temel bilgiler.</p>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>Kapalı teste nasıl katılabilirim?</summary>
+                        <p><a href="mailto:uniseccapp@gmail.com?subject=%C3%9CniSe%C3%A7%20kapal%C4%B1%20test%20kat%C4%B1l%C4%B1m%C4%B1">uniseccapp@gmail.com</a> adresine Google Play hesabında kullandığın e-posta adresini ilet. Test grubuna eklendikten sonra <a href="https://play.google.com/store/apps/details?id=com.unisec.app" target="_blank" rel="noopener noreferrer">Google Play sayfasından</a> uygulamayı açabilirsin.</p>
+                    </details>
+                    <details>
+                        <summary>Uygulamayı Google Play'de neden bulamıyorum?</summary>
+                        <p>Kapalı test sürümleri mağaza aramasında görünmeyebilir. Önce Google Play hesabının test grubuna eklenmesi gerekir; ardından uygulamayı doğrudan bağlantı üzerinden açabilirsin.</p>
+                    </details>
+                    <details>
+                        <summary>ÜniSeç ücretsiz mi?</summary>
+                        <p>Temel keşif özellikleri ücretsizdir. Bazı gelişmiş karşılaştırma ve yapay zeka özellikleri kullanım sınırlarına veya üyelik planlarına tabi olabilir.</p>
+                    </details>
+                    <details>
+                        <summary>Hesabımı ve verilerimi nasıl silebilirim?</summary>
+                        <p>Uygulama içindeki hesap ayarlarından silme işlemini başlatabilir veya <a href="account-deletion.html">hesap silme sayfasını</a> kullanabilirsin.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta" aria-labelledby="final-cta-title">
+            <div class="section-shell final-cta-card">
+                <img src="assets/brand/unisec-logo.svg" alt="" width="68" height="68">
+                <div>
+                    <span class="eyebrow">Tercihini şansa bırakma</span>
+                    <h2 id="final-cta-title">ÜniSeç'i erken deneyenlerden biri ol.</h2>
+                </div>
+                <a class="btn btn-light" href="https://play.google.com/store/apps/details?id=com.unisec.app" target="_blank" rel="noopener noreferrer">
+                    Google Play'de aç
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                 </a>
-                <a href="#" class="btn btn-outline">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    Google Play
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-shell footer-grid">
+            <div class="footer-brand">
+                <a href="#top" class="brand">
+                    <img src="assets/brand/unisec-logo.svg" alt="" width="42" height="42">
+                    <span>ÜniSeç</span>
                 </a>
+                <p>Üniversite tercihinden kampüs yaşamına uzanan dijital öğrenci rehberi.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h2>ÜniSeç</h2>
+                    <a href="#features">Özellikler</a>
+                    <a href="#closed-test">Kapalı test</a>
+                    <a href="#faq">Sık sorulanlar</a>
+                </div>
+                <div>
+                    <h2>Yasal</h2>
+                    <a href="privacy.html">Gizlilik politikası</a>
+                    <a href="account-deletion.html">Hesap ve veri silme</a>
+                </div>
+                <div>
+                    <h2>İletişim</h2>
+                    <a href="mailto:uniseccapp@gmail.com">uniseccapp@gmail.com</a>
+                </div>
             </div>
         </div>
-    </section>
-
-    <section id="features" class="features">
-        <div class="features-container">
-            <div class="feature-card">
-                <div class="icon-box" style="color: #818cf8; background: rgba(129, 140, 248, 0.1); border-color: rgba(129, 140, 248, 0.2);">
-                    <ion-icon name="analytics-outline"></ion-icon>
-                </div>
-                <h3>Yapay Zeka Karşılaştırması</h3>
-                <p>Üniversiteleri ve bölümleri saniyeler içinde analiz et. AI özetleri ile kendi kriterlerine en uygun olanı anında bul.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon-box" style="color: #f472b6; background: rgba(244, 114, 182, 0.1); border-color: rgba(244, 114, 182, 0.2);">
-                    <ion-icon name="chatbubbles-outline"></ion-icon>
-                </div>
-                <h3>Gerçek Öğrenci Yorumları</h3>
-                <p>Kampüslerin görünmeyen yüzünü öğren. İstersen tamamen anonim olarak kendi deneyimini paylaş ve topluluğa katkıda bulun.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon-box" style="color: #c084fc; background: rgba(192, 132, 252, 0.1); border-color: rgba(192, 132, 252, 0.2);">
-                    <ion-icon name="map-outline"></ion-icon>
-                </div>
-                <h3>Kampüs Çevresi Keşfi</h3>
-                <p>Öğrencilerin favori mekanlarını, kütüphaneleri ve kafeleri interaktif haritada keşfet, şehri bir öğrenci gibi yaşa.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 ÜniSeç. Tüm hakları saklıdır.</p>
-        <div style="margin-top: 20px;">
-            <a href="privacy.html">Gizlilik & Güvenlik Politikası</a>
-            <a href="mailto:support@unisec.com">İletişim</a>
+        <div class="section-shell footer-bottom">
+            <p>&copy; <span data-current-year>2026</span> ÜniSeç. Tüm hakları saklıdır.</p>
+            <p>Türkiye'deki üniversite adayları ve öğrenciler için geliştiriliyor.</p>
         </div>
     </footer>
 </body>
