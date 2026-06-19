@@ -1,11 +1,13 @@
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const navLinks = document.querySelector("[data-nav-links]");
 const header = document.querySelector("[data-header]");
+const menuIcon = menuToggle?.querySelector("ion-icon");
 
 function closeMenu() {
   if (!menuToggle || !navLinks) return;
   menuToggle.setAttribute("aria-expanded", "false");
   menuToggle.setAttribute("aria-label", "Menüyü aç");
+  menuIcon?.setAttribute("name", "menu-outline");
   navLinks.classList.remove("is-open");
   document.body.classList.remove("menu-open");
 }
@@ -15,6 +17,7 @@ if (menuToggle && navLinks) {
     const willOpen = menuToggle.getAttribute("aria-expanded") !== "true";
     menuToggle.setAttribute("aria-expanded", String(willOpen));
     menuToggle.setAttribute("aria-label", willOpen ? "Menüyü kapat" : "Menüyü aç");
+    menuIcon?.setAttribute("name", willOpen ? "close-outline" : "menu-outline");
     navLinks.classList.toggle("is-open", willOpen);
     document.body.classList.toggle("menu-open", willOpen);
   });
