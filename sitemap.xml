@@ -13,6 +13,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://uni-app-web-sitesi.vercel.app/terms.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://uni-app-web-sitesi.vercel.app/account-deletion.html</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
